@@ -1,4 +1,24 @@
 baseURL = 'https://rafisto.github.io/electronics'
 languageCode = 'pl-pl'
-title = 'Elektronika ALO'
+title = 'ElektronikaALO'
 theme = 'hugo-theme-m10c'
+
+[params]
+  math = true
+  description = 'Materiały dydaktyczne'
+  author = 'Rafał Włodarczyk'
+
+# latex
+
+[[module.mounts]]
+source = 'static'
+target = 'static'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]

@@ -18,11 +18,19 @@
     {{ template "_internal/twitter_cards.html" . }}
     {{ template "_internal/opengraph.html" . }}
 
+    {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+    {{ end }}
+
   </head>
   <body>
     <header class="app-header">
-      <a href="{{ .Site.BaseURL }}"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
-      <span class="app-header-title">{{ .Site.Title }}</span>
+      <!-- <a href="{{ .Site.BaseURL }}">
+        <img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" />
+      </a> -->
+      <a href="{{ .Site.BaseURL }}">
+        <span class="app-header-title">{{ .Site.Title }}</span>
+      </a>
       {{- with .Site.Menus.main }}
       <nav class="app-header-menu">
         {{- range $key, $item := . }}

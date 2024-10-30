@@ -1,3 +1,8 @@
++++
+date = '2024-10-08T10:00:00+01:00'
+title = "3.1 Prawo Ohma, Kirchhoffa i Joule'a"
++++
+
 Przeczytaj [2022-class-01](./../../2022/1_18.11.2022notes.md)
 
 ### Trudniejsze obwody.
@@ -25,6 +30,6 @@ $P=I^2 \cdot R$
 
 ![rozne-srednice-przewodow](rozne-srednice-przewodow.png)
 
-P
+Pytania:
 - skąd wiemy że ta moc wydzielana idzie dokładnie na ciepło
 - doładowywanie obwodu lrc za pomocą układu na tranzystorze

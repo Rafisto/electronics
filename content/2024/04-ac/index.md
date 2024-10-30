@@ -1,7 +1,8 @@
 +++
 date = '2024-10-29T10:00:00+01:00'
-
 title = '3.4 Prąd Zmienny'
+[params]
+  math = true
 +++
 
 - [Prąd zmienny](#prąd-zmienny)
@@ -98,7 +99,7 @@ W prądzie przemiennym sinusoidalnym, przesunięcie fazowe to różnica faz mię
 - Kondensator: prąd wyprzedza napięcie o 90° -  pełne naładowanie lub rozładowanie kondensatora zajmuje określoną ilość czasu, prąd płynie zanim napięcie osiągnie swoją maksymalną wartość
 - Cewka: prąd opóźnia napięcie o 90° - prąd płynie z opóźnieniem względem napięcia, ponieważ cewka ma swoje pole magnetyczne, które musi się zbudować
 
-![alt text](image.png)
+![alt text](phase-shift.png)
 
 Określanie przesunięcia fazowego na podstawie wykresu wskazowego.
 
