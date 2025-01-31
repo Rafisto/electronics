@@ -1,7 +1,7 @@
 +++
 date = '2024-11-19T10:00:00+01:00'
 
-title = '3.6 Kryptografia'
+title = '3.6 Podstawy Kryptografii'
 +++
 
 - [Kryptografia](#kryptografia)
@@ -216,17 +216,17 @@ Okazuje się, że jeśli $n=p$, jest liczbą pierwszą, to grupa multiplikatywna
 
 ##### Funkcja Phi Eulera
 
-Funkcja Phi Eulera $\phi(n)$ to funkcja, która zwraca liczbę liczb względnie pierwszych z $n$ mniejszych od $n$. Dla liczby pierwszej $p$ funkcja $\phi(p)$ zwraca $p-1$, natomiast dla liczby $n=p*q$ zwraca $(p-1)(q-1)$. Zauważmy, że:
+Funkcja Phi Eulera $\phi(n)$ to funkcja, która zwraca liczbę liczb względnie pierwszych z $n$ mniejszych od $n$. Dla liczby pierwszej $p$ funkcja $\phi(p)$ zwraca $p-1$, natomiast dla liczby $n=p\cdot q$ zwraca $(p-1)(q-1)$. Zauważmy, że:
 - $\phi(p) = p-1$
-- $\phi(p*q) = (p-1)(q-1)$, jeśli $p$ i $q$ są liczbami pierwszymi.
+- $\phi(p\cdot q) = (p-1)(q-1)$, jeśli $p$ i $q$ są liczbami pierwszymi.
 - $\phi(p^k) = p^{k-1}(p-1)$, dla $k \geq 1$.
-- $\phi(n) = n * \prod_{p|n} (1 - \frac{1}{p})$, gdzie $p|n$ oznacza, że $p$ dzieli $n$.
+- $\phi(n) = n \cdot \prod_{p|n} (1 - \frac{1}{p})$, gdzie $p|n$ oznacza, że $p$ dzieli $n$.
 
-Zauważmy że $|Z_n^*| = \phi(n)$, zatem dla $n=p*q$ mamy $|\mathbb{Z}_{pq}^*| = (p-1)(q-1)$.
+Zauważmy że $|Z_n^{\*}| = \phi(n)$, zatem dla $n=p*q$ mamy $|\mathbb{Z}_{pq}^{\*}| = (p-1)(q-1)$.
 
 ##### Odwrotność modulo
 
-[Odwrotność modulo](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse) $a^{-1} \mod n$ to taka liczba $b$, że $a*b \equiv 1 \mod n$. W przypadku RSA, potrzebujemy odnaleźć liczbę $d$, która spełnia warunek $e*d \equiv 1 \mod \phi(n)$. Wyznaczenie $d$ odbywa się za pomocą rozszerzonego algorytmu Euklidesa, który pozwala na znalezienie liczby odwrotnej modulo $\phi(n)$.
+[Odwrotność modulo](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse) $a^{-1} \mod n$ to taka liczba $b$, że $a\cdot b \equiv 1 \mod n$. W przypadku RSA, potrzebujemy odnaleźć liczbę $d$, która spełnia warunek $e\cdot d \equiv 1 \mod \phi(n)$. Wyznaczenie $d$ odbywa się za pomocą rozszerzonego algorytmu Euklidesa, który pozwala na znalezienie liczby odwrotnej modulo $\phi(n)$.
 
 Jeżeli nie znamy $\phi(n)$, to nie będziemy w stanie w prosty sposób wyznaczyć $d$.
 Jeżeli znamy $\phi(n)$ i $e$, to możemy wyznaczyć $d$ za pomocą rozszerzonego algorytmu Euklidesa, jest to zadanie prostsze niż rozkład $n$ na czynniki pierwsze.
